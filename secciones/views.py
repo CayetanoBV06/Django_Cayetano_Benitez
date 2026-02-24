@@ -21,3 +21,15 @@ def secciones(request):
     documento=planti.render(ctx)
 
     return HttpResponse(documento)
+
+def altas_secciones(request):
+#   secciones = Secciones.objects.all()
+#   return render(request, "subplantillas_secciones/altas_secciones.html", {"secciones": secciones})
+    return render(request, "subplantillas_secciones/altas_secciones.html")
+
+
+def listado_secciones(request):
+   # productos = Productos.objects.all()
+    #secciones = Secciones.objects.all()
+    #return render(request, "subplantillas_productos/listado_productos.html", {"productos": productos})
+    return render(request, "subplantillas_secciones/listado_secciones.html")

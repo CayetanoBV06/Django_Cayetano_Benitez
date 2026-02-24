@@ -40,8 +40,19 @@
 <body>
     <header>
         <h1>Esta es mi web</h1>
-        <button><a class="btn btn-custom-nav" href="{% url 'productos' %}">productos</a></button>
-        <button><a class="btn btn-custom-nav" href="{% url 'secciones' %}">secciones</a></button>
+
+    <select id="opciones" name="opciones" onchange="if(this.value) location.href=this.value;">
+        <option disabled selected value="">productos</option>
+        <option value="{% url 'altas_productos' %}">altas</option>
+        <option value="{% url 'listado_productos' %}">listado</option>
+    </select>
+
+    <select id="opciones" name="opciones" onchange="if(this.value) location.href=this.value;">
+        <option disabled selected value="">secciones</option>
+        <option value="{% url 'altas_secciones' %}">altas</option>
+        <option value="{% url 'listado_secciones' %}">listado</option>
+    </select>
+
         <button><a class="btn btn-custom-nav" href="{% url 'inicio' %}">inicio</a></button>
     </header>
     <section class="principal">
@@ -52,6 +63,10 @@
 
             {{mensaje}}
         </h1>
+        <h3>
+        {%block content%}
+        {%endblock%}
+        </h3>
     </section>
     <section class="links">
         <h2 class="tit">Links de interes</h2>

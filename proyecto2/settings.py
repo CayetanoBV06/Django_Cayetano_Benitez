@@ -54,7 +54,7 @@ ROOT_URLCONF = 'proyecto2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/usuario/Escritorio/proyecto2/proyecto2/proyecto2/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
